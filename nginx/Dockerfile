@@ -18,22 +18,13 @@ RUN npm ci --only=production
 COPY frontend/ ./
 RUN npm run build
 
-FROM alpine:3.18
-
-RUN apk add --no-cache \
-    nginx \
-    nginx-mod-rtmp \
-    ca-certificates \
-    tzdata
+FROM tiangolo/nginx-rtmp
 
 COPY --from=frontend-build /app/dist /usr/share/nginx/html
 
 COPY nginx/nginx.conf /etc/nginx/nginx.conf
 
-RUN mkdir -p /tmp/hls/live && \
-    chown -R nginx:nginx /tmp/hls && \
-    chown -R nginx:nginx /usr/share/nginx/html
-
+RUN mkdir -p /tmp/hls/live
 VOLUME ["/tmp/hls"]
 
 EXPOSE 80
