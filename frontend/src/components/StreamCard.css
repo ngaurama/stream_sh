@@ -1,0 +1,7 @@
+.bg-card {
+  display: block;
+  max-width: 100%;
+  /* border: 1px solid var(--foreground); */
+  padding: 8px 8px 8px 8px;
+  overflow: hidden;
+}

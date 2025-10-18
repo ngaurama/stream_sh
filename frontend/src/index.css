@@ -1,0 +1,62 @@
+@import "tailwindcss";
+
+body {
+    margin: 8px;
+}
+
+.link-danger {
+  background: transparent;
+}
+
+.link-danger:hover {
+  color: var(--danger);
+  background: color-mix(in srgb, var(--danger) 15%, transparent);
+}
+
+.link-danger:focus-visible,
+a:focus-visible {
+  outline: 1px solid var(--danger);
+  outline-offset: 2
+}
+
+.link-live {
+  background: color-mix(in srgb, var(--danger) 20%, transparent);
+}
+
+.link-live:hover {
+  background: var(--danger);
+}
+
+.link-live:focus-visible,
+a:focus-visible {
+  outline: 1px solid var(--danger);
+  outline-offset: 2px;
+}
+
+.scrollbar-thin::-webkit-scrollbar {
+  width: 6px;
+}
+
+.scrollbar-thin::-webkit-scrollbar-thumb {
+  background-color: rgba(255, 255, 255, 0.2);
+  border-radius: 10px;
+}
+
+.scrollbar-thin::-webkit-scrollbar-thumb:hover {
+  background-color: rgba(255, 255, 255, 0.3);
+}
+
+.scrollbar-thin {
+  scrollbar-width: thin; /* FIRFOX */
+  scrollbar-color: rgba(255, 255, 255, 0.2) transparent;
+  overflow: overlay;
+}
+
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
+.no-scrollbar {
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
