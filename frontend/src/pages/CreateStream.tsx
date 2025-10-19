@@ -355,7 +355,7 @@ export default function CreateStream() {
               <ol className="text-sm text-var(--accent)] list-decimal list-inside space-y-1">
                 <li>After creating the stream, you'll receive a stream key</li>
                 <li>Use OBS, Streamlabs, or similar streaming software</li>
-                <li>Set the server to: <code className="bg-[var(--background)] px-1">rtmp://${BASE_URL}/live</code></li>
+                <li>Set the server to: <code className="bg-[var(--background)] px-1">{`rtmp://${BASE_URL}/live`}</code></li>
                 <li>Enter your stream key in the streaming software</li>
                 <li>Start streaming and your stream will appear on the platform</li>
               </ol>
