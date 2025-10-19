@@ -19,7 +19,8 @@ services:
       dockerfile: nginx/Dockerfile
       args:
         - VITE_API_URL=${VITE_API_URL}
-        - VITE_WS_URL=${VITE_WS_URL}
+        - VITE_WEBSOCKET_URL=${VITE_WEBSOCKET_URL}
+        - VITE_IMAGE_URL=${VITE_IMAGE_URL}
         - VITE_BASE_URL=${VITE_BASE_URL}
     ports:
       - "80:80"
