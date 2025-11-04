@@ -11,7 +11,7 @@ Live at: https://stream.ngaurama.com
 ### Core Streaming
 + RTMP ingest (OBS, Streamlabs, etc. can stream directly)
 + Automatic HLS transcoding (Segmented .ts + .m3u8 playlist generation with 60s playback)
-+ Adaptive & low-latency playback using raw "<video>" HLS clients
++ Adaptive & low-latency playback using raw video HLS clients
 + Live channel pages with auto-refreshing video sources
 
 ### User and Channel features
